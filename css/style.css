@@ -1,100 +1,159 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-a{text-decoration: none;}
-body{
-  background: #010202;
-  font-family: "Source Sans Pro",sans-serif;
+
+a {
+    text-decoration: none;
 }
-.header{
-  width: 90%;
-  max-width: 1146px;
-  margin:auto;
-  padding: 56px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+body {
+    background: #010202;
+    font-family: "Source Sans Pro", sans-serif;
 }
-.logo{
-  display: block;
+
+.header {
+    width: 90%;
+    max-width: 1146px;
+    margin: auto;
+    padding: 56px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.user{
-  display: flex;
-  align-items: center;
+
+.logo {
+    display: block;
 }
-.user-photo{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+
+.user {
+    display: flex;
+    align-items: center;
 }
-.user-name{
-  margin-right: 15px;
-  font-family: "Source Sans Pro",sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  color: #FFFFFF;
-  text-decoration: none;
+
+.user-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
+
+.user-name {
+    margin-right: 15px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
 /* .film-title {
   font-size: 80px;
   padding-left: 100px;
 } */
-.app{
-  background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url('../images/cover-image.jpg') no-repeat top right;
-  min-height: 100vh;
-  color: white;
+
+.app {
+    background: linear-gradient(90deg, #010202 0%,  #010202 43%, rgba(1, 2, 2, 0.2) 90%);
+    min-height: 100vh;
+    color: white;
 }
-.film{
-  width: 90%;
-  max-width: 1146px;
-  margin: auto;
-  padding: 7% 0;
+
+.film {
+    width: 90%;
+    max-width: 1146px;
+    margin: auto;
+    padding: 7% 0;
 }
-.tags{
-  display: flex;
-  align-items: flex-start;
-  opacity: .4;
-  font-size: 16px;
-  line-height: 140%;
-  color: #E5E5E5;
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    opacity: .4;
+    font-size: 16px;
+    line-height: 140%;
+    color: #E5E5E5;
 }
-.tags> *{
-  margin-right: 15px;
+
+.tags>* {
+    margin-right: 15px;
+    margin-bottom: 10px;
 }
-.age{
-  border: 1px solid #FFFFFF;
-  border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
-  padding: 1px 5px;
+
+.age {
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    padding: 1px 5px;
 }
-.description{
-  max-width: 460px;
-  font-family: "Source Sans Pro",sans-serif;
-  font-weight: normal;
-  font-size: 21px;
-  line-height: 140%;
-  color: #FFFFFF;
-  margin-bottom: 36px;
+
+.description {
+    max-width: 460px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin-bottom: 36px;
 }
-button{
-  padding: 11px 26px;
-  background: #2F2F2F;
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border:none;
-  color:#fff;
+
+button {
+    padding: 11px 26px;
+    background: #2F2F2F;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border: none;
+    color: #fff;
 }
-.button-primary{
-  background: #EA6E20;
-  margin-right: 15px;
+
+.button-primary {
+    background: #EA6E20;
+    margin-right: 15px;
 }
-.button-icon{
-  margin-right: 10px;
+
+.button-text {
+    margin-left: 10px;
+}
+
+
+@media(max-width:768px){
+    .app{
+        height: auto;
+        padding-bottom: 400px;
+        background: url("../images/cover-image.jpg") no-repeat bottom center / 300px;
+    }
+    video{
+        display: none;  
+    }
+    .film{
+        padding-top: 2%;
+    }
+    .description{
+        font-size: 16px;
+        max-width: 333px;
+    }
+    .film-logo{
+        max-width:100%;
+    }
+}
+@media(max-width:586px){
+    .button-text{
+        display: none;
+    }
+    .user-name{
+        display: none;
+    }
+    .app{
+        padding-bottom: 350px;
+        background-size: 300px;
+    }
+    .button{
+        margin-bottom: 10px;
+    }
 }
